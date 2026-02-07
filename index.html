@@ -198,14 +198,15 @@
       display:block;
     }
 
-    /* SVG WhatsApp (inline, oficial) */
-    .waIcon{
-      width:22px;
-      height:22px;
+    /* ICONOS OFICIALES (SVG inline) */
+    .ico{
+      width:20px;
+      height:20px;
       display:inline-block;
       flex: 0 0 auto;
     }
-    .waIcon use{ pointer-events:none; }
+    .ico.wa{ width:22px; height:22px; }
+    .ico path{ pointer-events:none; }
 
     /* Mobile menu */
     .mobileMenu{
@@ -567,12 +568,20 @@
 
 <body>
 
-  <!-- SVG DEFINITIONS (INLINE) -->
+  <!-- DEFINICIONES SVG (INLINE) -->
   <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
-    <symbol id="wa-icon" viewBox="0 0 32 32">
-      <path fill="#25D366" d="M19.11 17.53c-.27-.14-1.6-.79-1.84-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.12 2.81.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
-      <path fill="#25D366" d="M26.7 5.3A13.2 13.2 0 0 0 3.9 22.2L2.5 29.5l7.45-1.36A13.2 13.2 0 0 0 26.7 5.3z"/>
-      <path fill="#fff" d="M16 5.4c-5.85 0-10.6 4.75-10.6 10.6 0 1.87.5 3.7 1.46 5.31l-.95 4.99 5.1-.93c1.55.84 3.29 1.29 5.0 1.29 5.85 0 10.6-4.75 10.6-10.6S21.85 5.4 16 5.4zm0 19.33c-1.59 0-3.14-.43-4.48-1.23l-.32-.19-3.03.55.57-2.95-.2-.3a8.64 8.64 0 0 1-1.35-4.65c0-4.77 3.88-8.65 8.65-8.65 4.77 0 8.65 3.88 8.65 8.65 0 4.77-3.88 8.65-8.65 8.65z"/>
+    <!-- WhatsApp (icono oficial estilo marca, vector) -->
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+      <path fill="#25D366" d="M20.52 3.48A11.87 11.87 0 0 0 12.06 0C5.53 0 .24 5.29.24 11.82c0 2.08.55 4.12 1.6 5.91L0 24l6.43-1.69a11.78 11.78 0 0 0 5.63 1.44h.01c6.53 0 11.82-5.29 11.82-11.82 0-3.16-1.23-6.13-3.37-8.45z"/>
+      <path fill="#FFFFFF" d="M12.07 21.74h-.01a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.81 1 1.02-3.71-.23-.38a9.86 9.86 0 0 1-1.52-5.25C2.14 6.43 6.64 1.93 12.06 1.93c2.63 0 5.1 1.02 6.96 2.88a9.79 9.79 0 0 1 2.88 6.95c0 5.43-4.5 9.98-9.83 9.98z"/>
+      <path fill="#25D366" d="M17.32 14.31c-.29-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.66.15-.2.29-.76.96-.93 1.16-.17.2-.34.22-.63.07-.29-.15-1.23-.45-2.35-1.45-.87-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.45-.52.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.52-.07-.15-.66-1.59-.9-2.19-.24-.57-.49-.5-.66-.5h-.57c-.2 0-.52.07-.79.37-.27.29-1.03 1.01-1.03 2.46 0 1.45 1.06 2.84 1.18 3.04.15.2 2.08 3.17 5.04 4.44.7.3 1.25.48 1.68.62.7.22 1.33.19 1.85.12.56-.08 1.74-.71 1.98-1.38.25-.67.25-1.26.17-1.38-.07-.12-.27-.2-.56-.35z"/>
+    </symbol>
+
+    <!-- Instagram (icono oficial estilo marca, vector) -->
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <path fill="#FFFFFF" d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Z"/>
+      <path fill="#FFFFFF" d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+      <path fill="#FFFFFF" d="M17.5 6.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
     </symbol>
   </svg>
 
@@ -599,13 +608,12 @@
 
       <div class="actions">
         <a class="btn" href="https://instagram.com/habitar.sepsico" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#icon-instagram" xlink:href="#icon-instagram"></use></svg>
           Instagram
         </a>
 
         <a class="btn btnPrimary" id="waTopBtn" href="#" aria-label="Reservar por WhatsApp">
-          <svg class="waIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-            <use href="#wa-icon" xlink:href="#wa-icon"></use>
-          </svg>
+          <svg class="ico wa" aria-hidden="true" focusable="false"><use href="#icon-whatsapp" xlink:href="#icon-whatsapp"></use></svg>
           Reservar por WhatsApp
         </a>
 
@@ -640,9 +648,7 @@
 
               <div class="ctaRow">
                 <a class="btn btnPrimary" id="waHeroBtn" href="#" aria-label="Agendar por WhatsApp">
-                  <svg class="waIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-                    <use href="#wa-icon" xlink:href="#wa-icon"></use>
-                  </svg>
+                  <svg class="ico wa" aria-hidden="true" focusable="false"><use href="#icon-whatsapp" xlink:href="#icon-whatsapp"></use></svg>
                   Agendar por WhatsApp
                 </a>
                 <a class="btn" href="#modalidad" aria-label="Ver modalidad">Ver modalidad</a>
@@ -796,12 +802,11 @@
 
                 <div class="ctaRow">
                   <a class="btn btnPrimary" id="waBottomBtn" href="#" aria-label="Escribir por WhatsApp">
-                    <svg class="waIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-                      <use href="#wa-icon" xlink:href="#wa-icon"></use>
-                    </svg>
+                    <svg class="ico wa" aria-hidden="true" focusable="false"><use href="#icon-whatsapp" xlink:href="#icon-whatsapp"></use></svg>
                     Escribir por WhatsApp
                   </a>
                   <a class="btn" href="https://instagram.com/habitar.sepsico" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram">
+                    <svg class="ico" aria-hidden="true" focusable="false"><use href="#icon-instagram" xlink:href="#icon-instagram"></use></svg>
                     Ver Instagram
                   </a>
                 </div>
@@ -814,6 +819,7 @@
                   Instagram: <strong style="color:rgba(242,244,248,.92);">@habitar.sepsico</strong>
                 </p>
                 <div class="badge">
+                  <svg class="ico wa" aria-hidden="true" focusable="false"><use href="#icon-whatsapp" xlink:href="#icon-whatsapp"></use></svg>
                   Turnos por WhatsApp
                 </div>
               </div>
@@ -826,9 +832,7 @@
   </main>
 
   <a class="waFloat" id="waFloat" href="#" aria-label="Abrir WhatsApp">
-    <svg class="waIcon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-      <use href="#wa-icon" xlink:href="#wa-icon"></use>
-    </svg>
+    <svg class="ico wa" aria-hidden="true" focusable="false"><use href="#icon-whatsapp" xlink:href="#icon-whatsapp"></use></svg>
     <span>WhatsApp</span>
   </a>
 
