@@ -1,0 +1,900 @@
+MODO DEMO CIBORG347 
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0b0b0e" />
+
+  <title>Mónica Landa Prieto | Psicología clínica y de la salud</title>
+  <meta name="description" content="TCC contextual • enfoque neuroafirmativo • Terapia online. Turnos por WhatsApp." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mónica Landa Prieto | Psicología clínica y de la salud" />
+  <meta property="og:description" content="TCC contextual • enfoque neuroafirmativo • Terapia online. Turnos por WhatsApp." />
+  <meta property="og:image" content="https://iili.io/fmwZVSV.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mónica Landa Prieto | Psicología clínica y de la salud" />
+  <meta name="twitter:description" content="TCC contextual • enfoque neuroafirmativo • Terapia online. Turnos por WhatsApp." />
+  <meta name="twitter:image" content="https://iili.io/fmwZVSV.png" />
+
+  <style>
+    :root{
+      --bg:#0b0b0e;
+      --txt:#f2f4f8;
+      --muted:#b8c0cc;
+      --card: rgba(255,255,255,.08);
+      --card2: rgba(255,255,255,.11);
+      --stroke: rgba(255,255,255,.14);
+      --shadow: 0 16px 60px rgba(0,0,0,.55);
+      --radius: 18px;
+      --radius2: 22px;
+      --max: 1100px;
+      --wa: #25D366;
+      --focus: rgba(140, 198, 255, .18);
+    }
+
+    *{ box-sizing:border-box; }
+    html, body { height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--txt);
+      background: var(--bg);
+      overflow-x:hidden;
+    }
+
+    /* Overlay */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(11,11,14,.62) 0%, rgba(11,11,14,.78) 60%, rgba(11,11,14,.88) 100%),
+        url("https://iili.io/fmwgQPS.jpg") center/cover no-repeat;
+      filter:saturate(1.05) contrast(1.02);
+      z-index:-2;
+    }
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      background: radial-gradient(1200px 600px at 15% 10%, rgba(255,255,255,.06), transparent 55%),
+                  radial-gradient(900px 520px at 85% 25%, rgba(255,255,255,.05), transparent 55%);
+      z-index:-1;
+      pointer-events:none;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .wrap{ width: min(var(--max), 100% - 34px); margin: 0 auto; }
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: linear-gradient(180deg, rgba(11,11,14,.62), rgba(11,11,14,.42));
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:14px 0;
+      width: min(var(--max), 100% - 34px);
+      margin: 0 auto;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+    .brandLogo{
+      width:44px;
+      height:44px;
+      border-radius: 14px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      flex: 0 0 auto;
+      box-shadow: 0 10px 28px rgba(0,0,0,.35);
+    }
+    .brandLogo img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .brandText{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+      min-width:0;
+    }
+    .brandText strong{
+      font-size: 14.5px;
+      letter-spacing: .2px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .brandText span{
+      font-size: 12px;
+      color: var(--muted);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:16px;
+      padding:0; margin:0;
+      align-items:center;
+    }
+    nav a{
+      font-size: 13px;
+      color: rgba(242,244,248,.9);
+      padding:10px 10px;
+      border-radius: 12px;
+      transition: .18s ease;
+    }
+    nav a:hover{ background: rgba(255,255,255,.06); }
+
+    .actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex: 0 0 auto;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 11px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--txt);
+      font-weight: 650;
+      font-size: 13.5px;
+      letter-spacing:.2px;
+      cursor:pointer;
+      transition: .18s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.085); }
+    .btn:active{ transform: translateY(0px); }
+
+    .btnPrimary{
+      border-color: rgba(37, 211, 102, .35);
+      background: linear-gradient(180deg, rgba(37,211,102,.16), rgba(37,211,102,.09));
+    }
+    .btnPrimary:hover{ background: linear-gradient(180deg, rgba(37,211,102,.20), rgba(37,211,102,.11)); }
+
+    .icon{
+      width:18px; height:18px;
+      display:inline-block;
+      flex: 0 0 auto;
+    }
+    .icon img{ width:100%; height:100%; object-fit:contain; display:block; }
+
+    .hamb{
+      display:none;
+      width:44px; height:44px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      cursor:pointer;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+      flex-direction:column;
+      transition:.18s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .hamb:hover{ background: rgba(255,255,255,.085); transform: translateY(-1px); }
+    .hamb span{
+      width:18px; height:2px;
+      background: rgba(242,244,248,.92);
+      border-radius:999px;
+      display:block;
+    }
+
+    /* Mobile menu */
+    .mobileMenu{
+      display:none;
+      border-top: 1px solid rgba(255,255,255,.08);
+      background: rgba(11,11,14,.62);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .mobileMenu .wrap{
+      padding: 10px 0 14px;
+    }
+    .mobileMenu a{
+      display:block;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.06);
+      margin-top:10px;
+      font-size: 13.5px;
+    }
+
+    /* Sections */
+    main{ padding-bottom: 80px; }
+    section{ padding: 44px 0; }
+    .hero{ padding: 40px 0 34px; }
+    .gridHero{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 18px;
+      align-items:stretch;
+    }
+
+    .card{
+      border-radius: var(--radius2);
+      border: 1px solid rgba(255,255,255,.14);
+      background: linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.06));
+      box-shadow: var(--shadow);
+    }
+    .cardInner{ padding: 22px; }
+
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: rgba(242,244,248,.92);
+      font-size: 12.5px;
+      letter-spacing:.2px;
+    }
+    h1{
+      margin: 14px 0 8px;
+      font-size: clamp(28px, 3.2vw, 44px);
+      line-height: 1.06;
+      letter-spacing: -.4px;
+    }
+    .sub{
+      margin: 0 0 14px;
+      font-size: 14.8px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .lead{
+      margin: 0 0 18px;
+      font-size: 15.5px;
+      line-height: 1.65;
+      color: rgba(242,244,248,.92);
+      max-width: 58ch;
+    }
+
+    .ctaRow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 14px;
+    }
+
+    .infoList{
+      display:grid;
+      gap:10px;
+      margin: 6px 0 0;
+      padding:0;
+      list-style:none;
+    }
+    .infoList li{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      font-size: 13.6px;
+      color: rgba(242,244,248,.92);
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+    }
+    .dot{
+      width:10px; height:10px;
+      border-radius: 999px;
+      background: rgba(37,211,102,.9);
+      margin-top: 4px;
+      flex:0 0 auto;
+      box-shadow: 0 0 0 4px rgba(37,211,102,.14);
+    }
+
+    .sectionTitle{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:14px;
+      margin-bottom: 16px;
+    }
+    .sectionTitle h2{
+      margin:0;
+      font-size: 22px;
+      letter-spacing: -.2px;
+    }
+    .sectionTitle p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13.8px;
+      line-height:1.5;
+      max-width: 66ch;
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .miniCard{
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.14);
+      background: linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.05));
+      box-shadow: 0 14px 44px rgba(0,0,0,.35);
+      padding: 16px;
+      min-height: 112px;
+    }
+    .miniCard h3{
+      margin:0 0 6px;
+      font-size: 15px;
+      letter-spacing:-.15px;
+    }
+    .miniCard p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .pillList{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    .pill{
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      font-size: 13.2px;
+      color: rgba(242,244,248,.92);
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .step{
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      padding: 16px;
+      box-shadow: 0 14px 44px rgba(0,0,0,.28);
+    }
+    .step strong{
+      display:block;
+      font-size: 14.5px;
+      margin-bottom: 6px;
+      letter-spacing:-.1px;
+    }
+    .step span{
+      display:block;
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height:1.55;
+    }
+
+    details{
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      border-radius: 16px;
+      padding: 14px 14px;
+      box-shadow: 0 14px 44px rgba(0,0,0,.26);
+    }
+    details + details{ margin-top: 10px; }
+    summary{
+      cursor:pointer;
+      list-style:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    details p{
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 13.6px;
+      line-height: 1.6;
+    }
+    .chev{
+      width: 10px; height: 10px;
+      border-right: 2px solid rgba(242,244,248,.9);
+      border-bottom: 2px solid rgba(242,244,248,.9);
+      transform: rotate(45deg);
+      transition: .18s ease;
+      flex: 0 0 auto;
+      margin-left: 10px;
+      opacity:.9;
+    }
+    details[open] .chev{ transform: rotate(225deg); }
+
+    .contactCard{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 14px;
+      align-items:stretch;
+    }
+    .hint{
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height:1.6;
+      margin: 0 0 10px;
+    }
+    .hint strong{ color: rgba(242,244,248,.92); }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: rgba(242,244,248,.92);
+      font-size: 13.2px;
+      margin-top: 10px;
+    }
+
+    /* Floating WhatsApp */
+    .waFloat{
+      position:fixed;
+      right: 16px;
+      bottom: 88px; /* queda arriba del footer */
+      z-index: 70;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(37,211,102,.35);
+      background: linear-gradient(180deg, rgba(37,211,102,.18), rgba(37,211,102,.10));
+      box-shadow: 0 18px 60px rgba(0,0,0,.55);
+      transition: .18s ease;
+      max-width: calc(100vw - 32px);
+    }
+    .waFloat:hover{ transform: translateY(-1px); }
+    .waFloat span{
+      font-weight: 750;
+      letter-spacing:.2px;
+      font-size: 13.5px;
+      white-space:nowrap;
+    }
+    .waBubble{
+      width: 22px;
+      height: 22px;
+    }
+
+    /* Footer */
+    footer{
+      padding: 22px 0 28px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      background: rgba(11,11,14,.55);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .foot{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      color: var(--muted);
+      font-size: 12.8px;
+    }
+    .foot a{
+      color: rgba(242,244,248,.9);
+      border-bottom: 1px dashed rgba(242,244,248,.35);
+      padding-bottom: 1px;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .gridHero{ grid-template-columns: 1fr; }
+      .contactCard{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 860px){
+      nav ul{ display:none; }
+      .hamb{ display:flex; }
+    }
+    @media (max-width: 780px){
+      section{ padding: 38px 0; }
+      .grid3{ grid-template-columns: 1fr; }
+      .grid2{ grid-template-columns: 1fr; }
+      .steps{ grid-template-columns: 1fr; }
+      .brandText strong{ max-width: 46vw; }
+      .actions .btn{ display:none; } /* dejamos CTA dentro del menú móvil + flotante */
+    }
+    @media (max-width: 420px){
+      .brandLogo{ width:42px; height:42px; }
+      .brandText strong{ max-width: 54vw; }
+      .waFloat span{ display:none; } /* solo burbuja en pantallas muy chicas */
+      .waFloat{ padding: 12px; }
+    }
+
+    /* Focus */
+    a:focus, button:focus, summary:focus{
+      outline: 2px solid transparent;
+      box-shadow: 0 0 0 4px var(--focus);
+      border-radius: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav" role="navigation" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <div class="brandLogo" aria-hidden="true">
+          <img src="https://iili.io/fmwZVSV.png" alt="Logo" />
+        </div>
+        <div class="brandText">
+          <strong>Mónica Landa Prieto</strong>
+          <span>Psicología clínica y de la salud</span>
+        </div>
+      </a>
+
+      <nav aria-label="Secciones">
+        <ul>
+          <li><a href="#enfoque">Enfoque</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#modalidad">Modalidad</a></li>
+          <li><a href="#turnos">Turnos</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <a class="btn" href="https://instagram.com/habitar.sepsico" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram">
+          <span class="icon" aria-hidden="true">
+            <!-- Icono IG simple (sin assets extra) -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.5 2.5h9A5 5 0 0 1 21.5 7.5v9a5 5 0 0 1-5 5h-9a5 5 0 0 1-5-5v-9a5 5 0 0 1 5-5Z" stroke="rgba(242,244,248,.92)" stroke-width="1.6"/>
+              <path d="M12 16.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z" stroke="rgba(242,244,248,.92)" stroke-width="1.6"/>
+              <path d="M17.2 6.8h.01" stroke="rgba(242,244,248,.92)" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </span>
+          Instagram
+        </a>
+
+        <a class="btn btnPrimary" id="waTopBtn" href="#" aria-label="Reservar por WhatsApp">
+          <span class="icon waBubble" aria-hidden="true">
+            <img src="https://iili.io/fm1NjzQ.jpg" alt="" />
+          </span>
+          Reservar por WhatsApp
+        </a>
+
+        <button class="hamb" id="hamb" aria-label="Abrir menú" aria-controls="mobileMenu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobileMenu" id="mobileMenu" aria-label="Menú móvil">
+      <div class="wrap">
+        <a href="#enfoque" class="mLink">Enfoque</a>
+        <a href="#servicios" class="mLink">Servicios</a>
+        <a href="#modalidad" class="mLink">Modalidad</a>
+        <a href="#turnos" class="mLink">Turnos</a>
+        <a href="https://instagram.com/habitar.sepsico" target="_blank" rel="noopener noreferrer" class="mLink">Instagram (@habitar.sepsico)</a>
+        <a href="#" id="waMobileBtn" class="mLink">Agendar por WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="wrap">
+        <div class="gridHero">
+          <div class="card">
+            <div class="cardInner">
+              <div class="kicker">TCC contextual • enfoque neuroafirmativo • Terapia online</div>
+              <h1>Psicología clínica y de la salud</h1>
+              <p class="sub">Un espacio de acompañamiento profesional, respetuoso y claro para trabajar lo que hoy te está pesando.</p>
+              <p class="lead">Trabajo con herramientas concretas para el día a día, cuidando tu ritmo y construyendo un proceso realista, con encuadre profesional.</p>
+
+              <div class="ctaRow">
+                <a class="btn btnPrimary" id="waHeroBtn" href="#" aria-label="Agendar por WhatsApp">
+                  <span class="icon waBubble" aria-hidden="true">
+                    <img src="https://iili.io/fm1NjzQ.jpg" alt="" />
+                  </span>
+                  Agendar por WhatsApp
+                </a>
+                <a class="btn" href="#modalidad" aria-label="Ver modalidad">Ver modalidad</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="cardInner">
+              <div class="kicker">Información rápida</div>
+              <ul class="infoList">
+                <li><span class="dot"></span><div><strong>Atención online</strong><br><span style="color:var(--muted);font-size:13.2px;">Sesiones desde donde estés.</span></div></li>
+                <li><span class="dot"></span><div><strong>Enfoque contextual + neuroafirmativo</strong><br><span style="color:var(--muted);font-size:13.2px;">Acompañamiento respetuoso.</span></div></li>
+                <li><span class="dot"></span><div><strong>Turnos por WhatsApp</strong><br><span style="color:var(--muted);font-size:13.2px;">Coordinación simple y directa.</span></div></li>
+              </ul>
+
+              <div class="badge">
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" stroke="rgba(242,244,248,.92)" stroke-width="1.6"/>
+                    <path d="M12 6v6l4 2" stroke="rgba(242,244,248,.92)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                Respuesta en el día (según disponibilidad)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="enfoque">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>Un enfoque claro, con herramientas concretas</h2>
+            <p>Trabajo desde la TCC contextual con perspectiva neuroafirmativa, priorizando un proceso cuidadoso, realista y adaptado a cada persona.</p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <div class="miniCard">
+            <h3>TCC contextual</h3>
+            <p>Herramientas prácticas para el día a día, sin perder profundidad.</p>
+          </div>
+          <div class="miniCard">
+            <h3>Enfoque neuroafirmativo</h3>
+            <p>Acompañamiento respetuoso, centrado en la experiencia de cada persona.</p>
+          </div>
+          <div class="miniCard">
+            <h3>Terapia online</h3>
+            <p>Sesiones desde donde estés, con una modalidad simple y ordenada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>¿En qué puedo ayudarte?</h2>
+            <p>Algunas consultas frecuentes (podés escribirme igual aunque no veas tu caso acá).</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardInner">
+            <ul class="pillList">
+              <li class="pill">Ansiedad y estrés</li>
+              <li class="pill">Autoconocimiento y autoestima</li>
+              <li class="pill">Vínculos y límites</li>
+              <li class="pill">Regulación emocional</li>
+              <li class="pill">Procesos de cambio y decisiones</li>
+              <li class="pill">Acompañamiento neuroafirmativo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modalidad">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>Modalidad de trabajo (online)</h2>
+            <p>Para que sea fácil y claro desde el primer contacto.</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <strong>1) Me escribís por WhatsApp</strong>
+            <span>Contame brevemente tu consulta y tu disponibilidad horaria.</span>
+          </div>
+          <div class="step">
+            <strong>2) Coordinamos turno</strong>
+            <span>Te confirmo horario y dinámica para que esté todo ordenado.</span>
+          </div>
+          <div class="step">
+            <strong>3) Empezamos el proceso</strong>
+            <span>Sesiones online con encuadre profesional y cuidando tu ritmo.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>Preguntas frecuentes</h2>
+            <p>Si te queda alguna duda, escribime y lo charlamos.</p>
+          </div>
+        </div>
+
+        <details>
+          <summary>¿Cómo son las sesiones online? <i class="chev"></i></summary>
+          <p>Las sesiones se realizan de forma online, en un espacio cuidado y con un encuadre profesional. Al coordinar, te indico la modalidad y lo necesario para conectarte.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto duran y cada cuánto se recomienda? <i class="chev"></i></summary>
+          <p>La duración y frecuencia se conversan según tu situación y objetivos, para que el proceso sea realista y sostenible.</p>
+        </details>
+        <details>
+          <summary>¿Cómo se coordinan los turnos? <i class="chev"></i></summary>
+          <p>Por WhatsApp. Me contás brevemente tu consulta y disponibilidad, y te propongo opciones de horario.</p>
+        </details>
+        <details>
+          <summary>¿Medios de pago disponibles? <i class="chev"></i></summary>
+          <p>Se informa al coordinar el turno. Si necesitás detalles, podés consultarlo por WhatsApp.</p>
+        </details>
+        <details>
+          <summary>¿Política de cancelación o reprogramación? <i class="chev"></i></summary>
+          <p>La reprogramación se coordina con aviso previo. Para mantener un encuadre cuidado, lo conversamos al momento de agendar.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="turnos">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <div>
+            <h2>Turnos y contacto</h2>
+            <p>Si te hace sentido, escribime y coordinamos.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardInner">
+            <div class="contactCard">
+              <div>
+                <p class="hint">
+                  Para coordinar más rápido, enviame:
+                  <br><strong>(1)</strong> motivo de consulta en 1–2 líneas,
+                  <strong>(2)</strong> días/horarios disponibles,
+                  <strong>(3)</strong> si preferís mañana o tarde.
+                </p>
+
+                <div class="ctaRow">
+                  <a class="btn btnPrimary" id="waBottomBtn" href="#" aria-label="Escribir por WhatsApp">
+                    <span class="icon waBubble" aria-hidden="true">
+                      <img src="https://iili.io/fm1NjzQ.jpg" alt="" />
+                    </span>
+                    Escribir por WhatsApp
+                  </a>
+                  <a class="btn" href="https://instagram.com/habitar.sepsico" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram">
+                    Ver Instagram
+                  </a>
+                </div>
+              </div>
+
+              <div class="miniCard" style="padding:18px;">
+                <h3 style="margin:0 0 8px;">Contacto directo</h3>
+                <p style="margin:0;color:var(--muted);font-size:13.5px;line-height:1.6;">
+                  WhatsApp: <strong style="color:rgba(242,244,248,.92);">+54 9 11 6449-9481</strong><br>
+                  Instagram: <strong style="color:rgba(242,244,248,.92);">@habitar.sepsico</strong>
+                </p>
+                <div class="badge">
+                  <span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20 12a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" stroke="rgba(242,244,248,.92)" stroke-width="1.6"/>
+                      <path d="M8 12l2.6 2.6L16 9.2" stroke="rgba(242,244,248,.92)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  Turnos por WhatsApp
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp flotante -->
+  <a class="waFloat" id="waFloat" href="#" aria-label="Abrir WhatsApp">
+    <span class="icon waBubble" aria-hidden="true">
+      <img src="https://iili.io/fm1NjzQ.jpg" alt="" />
+    </span>
+    <span>WhatsApp</span>
+  </a>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>© <span id="year"></span> Mónica Landa Prieto — Terapia online</div>
+        <div>
+          <a href="https://ciborg347.onrender.com" target="_blank" rel="noopener noreferrer">Creado y diseñado por Ciborg 347</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const phone = "5491164499481";
+      const baseMsg =
+        "Hola Mónica, ¿cómo estás? Te escribo desde la web. " +
+        "Mi consulta es: ___ (1–2 líneas). " +
+        "Disponibilidad: ___ (días/horarios). " +
+        "Prefiero: mañana / tarde.";
+
+      const waUrl = "https://wa.me/" + phone + "?text=" + encodeURIComponent(baseMsg);
+
+      const ids = ["waTopBtn","waHeroBtn","waBottomBtn","waFloat","waMobileBtn"];
+      ids.forEach(id=>{
+        const el = document.getElementById(id);
+        if(el) el.setAttribute("href", waUrl);
+      });
+
+      // Año
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Menú móvil
+      const hamb = document.getElementById("hamb");
+      const menu = document.getElementById("mobileMenu");
+      const links = document.querySelectorAll(".mLink");
+
+      function closeMenu(){
+        menu.style.display = "none";
+        hamb.setAttribute("aria-expanded", "false");
+      }
+
+      hamb.addEventListener("click", ()=>{
+        const open = hamb.getAttribute("aria-expanded") === "true";
+        hamb.setAttribute("aria-expanded", String(!open));
+        menu.style.display = open ? "none" : "block";
+      });
+
+      links.forEach(a=>{
+        a.addEventListener("click", ()=>{
+          closeMenu();
+        });
+      });
+
+      // Cierra menú si se agranda pantalla
+      window.addEventListener("resize", ()=>{
+        if(window.innerWidth > 860) closeMenu();
+      });
+    })();
+  </script>
+</body>
+</html>
+```
